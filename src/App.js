@@ -1,8 +1,12 @@
 import Navbar from "./components/Navbar";
+import ImageGallery from "./components/ImageGallery";
 
 function App() {
   return (
-    <Navbar />
+    <div>
+      <Navbar />
+      <ImageGallery />
+    </div>
   );
 }
 
