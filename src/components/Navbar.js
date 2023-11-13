@@ -3,7 +3,7 @@ import Avatar from "../images/image-avatar.png";
 
 function Navbar() {
   return (
-    <ul>
+    <ul className="navbar">
       <li><h1>sneakers</h1></li>
       <li><a href="#">Collections</a></li>
       <li><a href="#">Men</a></li>
