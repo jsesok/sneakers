@@ -6,8 +6,10 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ImageGallery />
-      <Product />
+      <div className="content-container">
+        <ImageGallery />
+        <Product />
+      </div>
     </div>
   );
 }

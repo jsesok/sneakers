@@ -6,11 +6,11 @@ function Navbar() {
     <nav className="navbar">
       <ul className="left-items">
         <li><h1>sneakers</h1></li>
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li className="item"><a href="#">Collections</a></li>
+        <li className="item"><a href="#">Men</a></li>
+        <li className="item"><a href="#">Women</a></li>
+        <li className="item"><a href="#">About</a></li>
+        <li className="item"><a href="#">Contact</a></li>
       </ul>
       <ul className="right-items">
         <li><a href="#"><CartIcon /></a></li>
