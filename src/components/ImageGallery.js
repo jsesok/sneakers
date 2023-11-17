@@ -48,7 +48,7 @@ function ImageGallery() {
       <div className="wrapper-main-img" onClick={handleMainImageClick}>
         <img src={mainImage} alt="Sneakers" className="main-img"/>
       </div>
-      <div className="thumbnails">
+      <div className="thumbnails-main-view">
         {/* later on change this to a map function */}
         <div className="wrapper-img" onClick={() => setMainImage(Image1)}>
           <img src={Image1Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image1 ? "thumbnail-img thumbnail-img-chosen" : " thumbnail-img"}/>

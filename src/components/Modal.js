@@ -16,13 +16,14 @@ const Modal = ({ imgToShow, closeModal, navigateImages, imageList, setMainImage 
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-main-img">
           <img src={imgToShow} alt="Modal" className="main-img" />
-          <div className="modal-navigation">
-            <PreviousIcon className="icon" onClick={handlePrev} />
-            <NextIcon className="icon" onClick={handleNext} />
+          <div className="modal-directions">
+            <PreviousIcon className="icon-direction" onClick={handlePrev} />
+            <NextIcon className="icon-direction" onClick={handleNext} />
           </div>
         </div>
-        <div className="thumbnails">
+        <div className="thumbnails-modal-view">
           {imageList.map((img, index) => (
+            <div className="thumbnail-wrapper">
               <img
                 className={img.fullSize === imgToShow ? "thumbnail-img thumbnail-img-chosen" : " thumbnail-img"}
                 key={index}
@@ -30,9 +31,12 @@ const Modal = ({ imgToShow, closeModal, navigateImages, imageList, setMainImage 
                 alt={`Thumbnail ${index + 1}`}
                 onClick={() => setMainImage(img.fullSize)}
               />
+            </div>
             ))}
         </div>
-        <CloseIcon className="close-icon" onClick={closeModal} />
+        <div className="close-icon-container" onClick={closeModal}>
+          <CloseIcon className="close-icon" />
+        </div>
       </div>
     </div>
   );

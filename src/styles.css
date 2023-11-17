@@ -30,15 +30,15 @@ ul {
   display: flex;
   align-items: center;
   margin: 0;
-  padding-left: 0; 
+  padding-left: 0;
 }
 
 .left-items {
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .right-items {
-  gap: 3.5rem;
+  gap: 3rem;
 }
 
 .navbar .left-items .item {
@@ -73,33 +73,60 @@ ul {
 }
 
 .main-img {
-  max-width: 24rem;
-  padding-bottom: 1rem;
+  width: 42rem;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.3rem;
   border-radius: 5%;
 }
 
-.thumbnails {
+.main-img:hover {
+  cursor: pointer;
+}
+
+.thumbnails-main-view {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.thumbnails-modal-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
 .thumbnail-img {
   max-width: 4.5rem;
-  border-radius: 5%;
-  border: 3px solid transparent;
+  border-radius: 15%;
+  margin: 0;
+  padding: 0;
 }
 
 .thumbnail-img:hover {
   background-color: white;
   opacity: 0.4;
+  cursor: pointer;
 }
 
 .thumbnail-img-chosen {
   background-color: white;
   opacity: 0.4;
   border: 3px solid hsl(26, 100%, 55%);
+}
+
+
+.thumbnail-wrapper {
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+  overflow: hidden;
+  background-color: white;
+  border-radius: 15%;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .modal-overlay {
@@ -120,7 +147,7 @@ ul {
   position: relative;
 }
 
-.modal-navigation {
+.modal-directions {
   position: absolute;
   top: 41%;
   width: 100%;
@@ -129,14 +156,27 @@ ul {
   align-items: center;
 }
 
+.modal-main-img img {
+  width: 29rem;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.2rem;
+  border-radius: 5%;
+}
+
 .close-icon {
   position: absolute;
   top: 0.1rem;
   right: 0.2rem;
   cursor: pointer;
+  fill: #c3cad9;
 }
 
-.icon {
+.close-icon-container:hover .close-icon {
+  fill: hsl(26, 100%, 55%);
+}
+
+.icon-direction {
   background-color: white;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
@@ -144,6 +184,10 @@ ul {
   padding-bottom: 0.6rem;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.icon-direction:hover path {
+  stroke: hsl(26, 100%, 55%);
 }
 
 .company {
@@ -158,7 +202,7 @@ ul {
 }
 
 .description {
-  color: hsl(219, 9%, 45%)
+  color: hsl(219, 9%, 45%);
 }
 
 .price {
@@ -188,7 +232,7 @@ ul {
 
 .content-container {
   display: flex;
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-left: 12rem;
   margin-right: 12rem;
   justify-content: space-between;
