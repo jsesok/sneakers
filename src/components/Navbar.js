@@ -13,7 +13,7 @@ function Navbar() {
         <li className="item"><a href="#">Contact</a></li>
       </ul>
       <ul className="right-items">
-        <li><a href="#"><CartIcon /></a></li>
+        <li><a href="#"><CartIcon className="cart" /></a></li>
         <li><a href="#"><img src={Avatar} alt="Avatar"/></a></li>
       </ul>
     </nav>
