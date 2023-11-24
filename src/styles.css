@@ -191,6 +191,7 @@ ul {
 }
 
 .company {
+  font-size: 1rem;
   color: hsl(26, 100%, 55%);
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -297,6 +298,19 @@ ul {
   background-color: hsl(25, 100%, 72%);
 }
 
+.btn-checkout {
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  width: 90%;
+  height: 3rem;
+  border-radius: 0.6rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
 .cart {
   fill: hsl(219, 9%, 45%);
 }
@@ -323,7 +337,59 @@ ul {
   font-weight: 700;
 }
 
-.minus-icon {
+.m-icon {
   display: flex;
   align-items: center;
+}
+
+.cart-title {
+ padding-left: 1rem;
+}
+
+.cart-container {
+  position: fixed;
+  top: 6rem;
+  right: 5rem;
+  width: 22rem;
+  height: 13.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(223, 64%, 98%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.cart-content-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid #c3cad9;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.cart-thumbnail-img {
+  max-width: 3rem;
+  border-radius: 15%;
+  margin: 0;
+  padding: 0;
+}
+
+.total-price {
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.cart-description {
+  color: hsl(219, 9%, 45%);
+  line-height: 1.7rem;
+  margin: 0
+}
+
+.empty-cart-message {
+  color: hsl(220, 14%, 75%);
+  text-align: center;
+  padding: auto;
 }

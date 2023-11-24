@@ -51,16 +51,16 @@ function ImageGallery() {
       <div className="thumbnails-main-view">
         {/* later on change this to a map function */}
         <div className="wrapper-img" onClick={() => setMainImage(Image1)}>
-          <img src={Image1Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image1 ? "thumbnail-img thumbnail-img-chosen" : " thumbnail-img"}/>
+          <img src={Image1Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image1 ? "thumbnail-img thumbnail-img-chosen" : "thumbnail-img"}/>
         </div>
         <div className="wrapper-img" onClick={() => setMainImage(Image2)}>
-          <img src={Image2Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image2 ? "thumbnail-img thumbnail-img-chosen" : " thumbnail-img"} />
+          <img src={Image2Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image2 ? "thumbnail-img thumbnail-img-chosen" : "thumbnail-img"} />
         </div>
         <div className="wrapper-img" onClick={() => setMainImage(Image3)}>
-          <img src={Image3Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image3 ? "thumbnail-img thumbnail-img-chosen" : " thumbnail-img"} />
+          <img src={Image3Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image3 ? "thumbnail-img thumbnail-img-chosen" : "thumbnail-img"} />
         </div>
         <div className="wrapper-img" onClick={() => setMainImage(Image4)}>
-          <img src={Image4Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image4 ? "thumbnail-img thumbnail-img-chosen" : " thumbnail-img"} />
+          <img src={Image4Thumbnail} alt="Sneakers thumbnail" className={mainImage === Image4 ? "thumbnail-img thumbnail-img-chosen" : "thumbnail-img"} />
         </div>
       </div>
       {isModalOpen && (
