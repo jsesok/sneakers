@@ -4,27 +4,22 @@ import { ReactComponent as MinusIcon } from "../images/icon-minus.svg";
 import { useState } from "react";
 
 
-function Product({quantity, setQuantity, price, oldPrice}) {
+function Product({counter, setCounter, quantity, setQuantity, price, oldPrice}) {
   const [addedToTheCart, setAddedToTheCart] = useState(false);
 
-  const handleReduceQuantity = () => {
-    if (quantity > 0) {
-      setQuantity((prev) => prev - 1);
+  const handleReduceCounter = () => {
+    if (counter > 0) {
+      setCounter((prev) => prev - 1);
     }
   };
 
-  const handleIncreaseQuantity = () => {
-    setQuantity((prev) => prev + 1);
+  const handleIncreaseCounter = () => {
+    setCounter((prev) => prev + 1);
   };
 
   const handleAddToCart = () => {
-    if (quantity) {
+      setQuantity((prev) => prev + counter)
       setAddedToTheCart(true);
-    }
-
-    setTimeout(() => {
-      setAddedToTheCart(false);
-    }, 10000);
   };
 
   return (
@@ -44,11 +39,11 @@ function Product({quantity, setQuantity, price, oldPrice}) {
       <div className="old-price">{`$${oldPrice}.00`}</div>
       <div className="btns">
         <span className="quantity">
-          <button className="btn-quantity" onClick={handleReduceQuantity}>
+          <button className="btn-quantity" onClick={handleReduceCounter}>
             <MinusIcon className="m-icon"/>
           </button>
-          <span className="number">{quantity}</span>
-          <button className="btn-quantity" onClick={handleIncreaseQuantity}>
+          <span className="number">{counter}</span>
+          <button className="btn-quantity" onClick={handleIncreaseCounter}>
             <PlusIcon className="m-icon"/>
           </button>
         </span>

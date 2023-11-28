@@ -1,7 +1,12 @@
 import { ReactComponent as DeleteIcon} from "../images/icon-delete.svg";
 import Image1Thumbnail from "../images/image-product-1-thumbnail.jpg";
 
-function Cart({quantity, price}) {
+function Cart({quantity, setQuantity, price}) {
+
+  const handleCartItemsDeletion = () => {
+    setQuantity(0);
+  }
+  
   return (
     quantity > 0 ? (
       <div className="cart-container">
@@ -15,7 +20,7 @@ function Cart({quantity, price}) {
             <div>{`$${price}.00 x ${quantity}`}<span className="total-price">{`$${price * quantity}.00`}</span></div>
           </div>
           <div>
-            <DeleteIcon/>
+            <DeleteIcon onClick={handleCartItemsDeletion}/>
           </div>
         </span>
         <button className="btn-checkout">Checkout</button>
