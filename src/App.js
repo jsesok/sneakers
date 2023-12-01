@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import ImageGallery from "./components/ImageGallery";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -11,13 +11,35 @@ function App() {
   const price = 125;
   const oldPrice = 250;
 
-  const handleCartIconClick = () => {
-    setCartVisibility(!isCartVisible);
+  const handleCartIconClick = (event) => {
+    event.stopPropagation();
+    if (isCartVisible) {
+      setCartVisibility(false);
+    } else {
+      setCartVisibility(true)
+    }
   };
+
+  const handleDocumentClick = (event) => {
+    if (isCartVisible && !event.target.closest('.cart-container')) {
+      setCartVisibility(false);;
+    }
+  };
+
+    useEffect(() => {
+      document.addEventListener('click', handleDocumentClick);
+      console.log(isCartVisible);
+      debugger
+
+      return () => {
+        document.removeEventListener('click', handleDocumentClick);
+      };
+    }, [isCartVisible]);
 
   return (
     <div>
        <Navbar
+        quantity={quantity}
         onCartIconClick={handleCartIconClick}
       />
       <div className="content-container">

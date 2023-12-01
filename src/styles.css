@@ -162,6 +162,8 @@ ul {
   height: auto;
   margin-bottom: 1.2rem;
   border-radius: 5%;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
 }
 
 .close-icon {
@@ -391,5 +393,25 @@ ul {
 .empty-cart-message {
   color: hsl(220, 14%, 75%);
   text-align: center;
-  padding: auto;
+  padding-top: 2.5rem;
+}
+
+.cart-icon-container {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.cart-icon-quantity {
+  position: absolute;
+  top: 0.1rem;
+  right: 0rem;
+  font-size: 0.6rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 0.7rem;
+  padding: 0.1rem 0.4rem;
+}
+
+.delete-icon {
+  cursor: pointer;
 }
