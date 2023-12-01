@@ -4,7 +4,7 @@ import { ReactComponent as MinusIcon } from "../images/icon-minus.svg";
 import { useState } from "react";
 
 
-function Product({counter, setCounter, quantity, setQuantity, price, oldPrice}) {
+function Product({counter, setCounter, setQuantity, price, oldPrice}) {
   const [addedToTheCart, setAddedToTheCart] = useState(false);
 
   const handleReduceCounter = () => {
@@ -20,6 +20,7 @@ function Product({counter, setCounter, quantity, setQuantity, price, oldPrice}) 
   const handleAddToCart = () => {
       setQuantity((prev) => prev + counter)
       setAddedToTheCart(true);
+      setCounter(0);
   };
 
   return (
@@ -31,12 +32,13 @@ function Product({counter, setCounter, quantity, setQuantity, price, oldPrice}) 
         Featuring a durable rubber outer sole, they'll withstand everything the
         weather can offer.
       </div>
-      <div className="price-container">
-        <span className="price">{`$${price}.00`}</span>
-        <span className="discount">50%</span>
-
+      <div className="prices-one-line">
+        <div className="price-container">
+          <span className="price">{`$${price}.00`}</span>
+          <span className="discount">50%</span>
+        </div>
+        <div className="old-price">{`$${oldPrice}.00`}</div>
       </div>
-      <div className="old-price">{`$${oldPrice}.00`}</div>
       <div className="btns">
         <span className="quantity">
           <button className="btn-quantity" onClick={handleReduceCounter}>
@@ -49,13 +51,9 @@ function Product({counter, setCounter, quantity, setQuantity, price, oldPrice}) 
         </span>
         <button className="btn-add-to-cart" onClick={handleAddToCart}>
           <CartIcon className="icon-add-to-cart" />
-          Add to cart
+          <span className="text-add-to-cart">Add to cart</span>
         </button>
       </div>
-      {/* instead of showing the cart items, show that little notification on the CartIcon */}
-      {/* {addedToTheCart && (
-        <Cart quantity={quantity} price={price} oldPrice={oldPrice} />
-      )} */}
     </div>
   );
 }

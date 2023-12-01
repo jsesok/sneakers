@@ -1,12 +1,13 @@
 import { ReactComponent as CartIcon } from "../images/icon-cart.svg";
 import Avatar from "../images/image-avatar.png";
-import { ReactComponent as DeleteIcon } from "../images/icon-delete.svg";
+import { ReactComponent as MenuIcon } from "../images/icon-menu.svg";
 
 function Navbar({ quantity, onCartIconClick }) {
   return (
     <nav className="navbar">
       <ul className="left-items">
-      <li><h1>sneakers</h1></li>
+        <li className="menu-icon"><MenuIcon /></li>
+        <li><h1>sneakers</h1></li>
         <li className="item"><a href="#">Collections</a></li>
         <li className="item"><a href="#">Men</a></li>
         <li className="item"><a href="#">Women</a></li>

@@ -28,8 +28,6 @@ function App() {
 
     useEffect(() => {
       document.addEventListener('click', handleDocumentClick);
-      console.log(isCartVisible);
-      debugger
 
       return () => {
         document.removeEventListener('click', handleDocumentClick);
@@ -47,7 +45,6 @@ function App() {
         <Product
           counter={counter}
           setCounter={setCounter}
-          quantity={quantity}
           setQuantity={setQuantity}
           price={price}
           oldPrice={oldPrice}

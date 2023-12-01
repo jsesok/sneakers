@@ -8,6 +8,8 @@ import Image3 from "../images/image-product-3.jpg";
 import Image3Thumbnail from "../images/image-product-3-thumbnail.jpg";
 import Image4 from "../images/image-product-4.jpg";
 import Image4Thumbnail from "../images/image-product-4-thumbnail.jpg";
+import { ReactComponent as PreviousIcon } from "../images/icon-previous.svg";
+import { ReactComponent as NextIcon } from "../images/icon-next.svg";
 
 function ImageGallery() {
   const [mainImage, setMainImage] = useState(Image1);
@@ -47,6 +49,13 @@ function ImageGallery() {
     <div className="wrapper">
       <div className="wrapper-main-img" onClick={handleMainImageClick}>
         <img src={mainImage} alt="Sneakers" className="main-img"/>
+      </div>
+      <div className="wrapper-main-img-mobile">
+        <img src={mainImage} alt="Sneakers" className="main-img"/>
+        <div className="directions">
+            <PreviousIcon className="icon-direction" onClick={() => navigateImages("prev")} />
+            <NextIcon className="icon-direction" onClick={() => navigateImages("next")} />
+        </div>
       </div>
       <div className="thumbnails-main-view">
         {/* later on change this to a map function */}
